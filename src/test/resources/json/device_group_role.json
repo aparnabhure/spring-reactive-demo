@@ -1,0 +1,65 @@
+{
+  "id": "lnaZLQQTTYOV2aU2ci4_xA",
+  "name": "device_groups_role",
+  "memberCount": 0,
+  "namespace": "ses",
+  "displayName": "device_groups_role",
+  "visibility": "domain",
+  "qrn": "domain::ses::device_groups_role",
+  "version": 3,
+  "domainId": "TEST-EqyneIWCT1KPtrAizpzB0w",
+  "assignedUserCount": 0,
+  "assignedOrgUnitCount": 3,
+  "desc": "Test Role to apply only on device groups",
+  "privileges": [
+    "aep_ct_view_tags",
+    "aep_view_commands",
+    "aep_view_dashboard",
+    "aep_view_license",
+    "aep_view_roles",
+    "aep_view_users",
+    "cp_view_policy",
+    "edr_view_incidents",
+    "edr_view_investigation",
+    "edr_view_lineage",
+    "read_events",
+    "read_roles",
+    "require_second_factor_auth",
+    "ses_manage_shared_endpoint",
+    "ses_update_shared_endpoint",
+    "ses_view_alert_rule",
+    "ses_view_shared_endpoint",
+    "view_domain",
+    "view_events",
+    "view_roles",
+    "view_users",
+    "vr_view_data"
+  ],
+  "included_scoping_org_units": [
+    {
+      "name": "newGroup",
+      "id": "PsFpTpUcRnecNZQxpHaaag",
+      "props": {
+        "parent_root": "Default"
+      }
+    },
+    {
+      "name": "rbacTestGroup",
+      "id": "arOCZFQLRvSV1asIXRMv2w",
+      "props": {
+        "parent_root": "Default"
+      }
+    },
+    {
+      "name": "Default",
+      "id": "zMUqWYhxR06nf28gRpA93Q",
+      "props": {
+        "ses_default": true
+      }
+    }
+  ],
+  "props": {
+    "isPredefinedRole": "false",
+    "isVisibleOnUI": "true"
+  }
+}

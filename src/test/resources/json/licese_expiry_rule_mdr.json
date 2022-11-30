@@ -1,0 +1,79 @@
+{
+  "name": "License Expiry",
+  "desc": "Notifies you in case of license expiry",
+  "id": "IBWwVWpES3aD6aMWxWk7jQ",
+  "revision": "11:0",
+  "rule_id": "e9548770-1ad5-11ec-eb03-00000000b9f5",
+  "message_template_id": "f61b23a9-5aa0-4957-8825-e77587128643",
+  "alert_engine_rule": {
+    "rule": {
+      "name": "License Expiry",
+      "desc": "Notifies you in case of license expiry",
+      "timeout": 0,
+      "typeId": "31",
+      "categoryId": 2,
+      "type": "one_event_rule",
+      "threshold": 0,
+      "cond": "[{\"conditions\":[{\"key\":\"type_id\",\"operator\":\"EQ\",\"value\":31,\"logical_operator\":\"NONE\"}],\"logical_operator\":\"NONE\"},{\"conditions\":[{\"key\":\"product_uid\",\"operator\":\"EQ\",\"value\":\"31B0C880-0229-49E8-94C5-48D56B1BD7B9\",\"logical_operator\":\"NONE\"},{\"key\":\"product_uid\",\"operator\":\"EQ\",\"value\":\"E3A8F790-52A2-4BE3-87D7-93698CDDD021\",\"logical_operator\":\"OR\"},{\"key\":\"product_uid\",\"operator\":\"EQ\",\"value\":\"578E79BB-B5F4-4F3B-9BED-E0B903E40458\",\"logical_operator\":\"OR\"},{\"key\":\"product_uid\",\"operator\":\"EQ\",\"value\":\"31b0c880-0229-49e8-94c5-48d56b1bd7b9\",\"logical_operator\":\"OR\"},{\"key\":\"product_uid\",\"operator\":\"EQ\",\"value\":\"e3a8f790-52a2-4be3-87d7-93698cddd021\",\"logical_operator\":\"OR\"},{\"key\":\"product_uid\",\"operator\":\"EQ\",\"value\":\"578e79bb-b5f4-4f3b-9bed-e0b903e40458\",\"logical_operator\":\"OR\"}],\"logical_operator\":\"AND\"}]",
+      "state": "Live",
+      "owner": "SEP",
+      "custom_condition": "(type_id : 31 AND (((((product_uid : 31B0C880-0229-49E8-94C5-48D56B1BD7B9 OR product_uid : E3A8F790-52A2-4BE3-87D7-93698CDDD021) OR product_uid : 578E79BB-B5F4-4F3B-9BED-E0B903E40458) OR product_uid : 31b0c880-0229-49e8-94c5-48d56b1bd7b9) OR product_uid : e3a8f790-52a2-4be3-87d7-93698cddd021) OR product_uid : 578e79bb-b5f4-4f3b-9bed-e0b903e40458))",
+      "order_slop_seconds": 0
+    },
+    "conclusion": {
+      "severity": 3,
+      "message": "License expiry in ${event.days_left} days",
+      "messageId": 11019,
+      "category_id": 2
+    }
+  },
+  "notification_settings": {
+    "enabled": true,
+    "recipients": [
+      {
+        "name": "botcdm_gdev17c084a39b4 Test",
+        "emailId": "botcdm_gdev17c084a39b4@saeptest.com",
+        "contactMethods": [
+          "email"
+        ],
+        "mdruser": false
+      },
+      {
+        "emailId": "nitin.bodke@broadcom.com",
+        "contactMethods": [
+          "email"
+        ],
+        "mdruser": false
+      },
+      {
+        "emailId": "abc@abc.com",
+        "contactMethods": [
+          "email"
+        ],
+        "mdruser": false
+      }
+    ]
+  },
+  "product_uuid": "31B0C880-0229-49E8-94C5-48D56B1BD7B9",
+  "alert_rule_id": "087cbb88-dfa1-46ad-9cc2-58128f141e5e",
+  "isPartnerManaged": false,
+  "isPredefined": true,
+  "is_custom": false,
+  "is_system": false,
+  "_schema_ver": "0-1-5",
+  "_id": "IBWwVWpES3aD6aMWxWk7jQ",
+  "created": "2021-09-21T12:17:38.699Z",
+  "modified": "2022-07-15T05:45:36.387Z",
+  "obj_classes": [
+    "alert_rule"
+  ],
+  "customer_id": "TEST-o5-puzW-Q5KPnInlLLw3uQ",
+  "domain_id": "TEST-EqyneIWCT1KPtrAizpzB0w",
+  "__path": [
+    {
+      "ns": "managed_products",
+      "id": "1-88mtEJQ3uzkHrdLQBFJw"
+    }
+  ],
+  "state": 0
+}

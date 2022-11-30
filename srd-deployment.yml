@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: spring-reactive-demo-pod
+spec:
+  volumes:
+    - name: system-tests-volume
+      persistentVolumeClaim:
+        claimName: system-tests-claims
+  containers:
+    - name: democontainer
+      image: aparnabhure/spring-reactive-demo:latest
+      ports:
+        - containerPort: 8080
+      volumeMounts:
+        - mountPath: /data/systemtests
+          name: system-tests-volume
+
+

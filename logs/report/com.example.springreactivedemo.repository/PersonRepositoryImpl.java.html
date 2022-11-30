@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PersonRepositoryImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCo Coverage Report</a> &gt; <a href="index.source.html" class="el_package">com.example.springreactivedemo.repository</a> &gt; <span class="el_source">PersonRepositoryImpl.java</span></div><h1>PersonRepositoryImpl.java</h1><pre class="source lang-java linenums">package com.example.springreactivedemo.repository;
+
+import com.example.springreactivedemo.domain.Person;
+import org.springframework.stereotype.Repository;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
+@Repository
+<span class="fc" id="L9">public class PersonRepositoryImpl implements PersonRepository{</span>
+<span class="fc" id="L10">    Person aparna =  new Person(1, &quot;aparna&quot;, &quot;bhure&quot;);</span>
+<span class="fc" id="L11">    Person medha =  new Person(2, &quot;medha&quot;, &quot;patil&quot;);</span>
+<span class="fc" id="L12">    Person arvind =  new Person(3, &quot;arvind&quot;, &quot;bhure&quot;);</span>
+<span class="fc" id="L13">    Person ruchi =  new Person(4, &quot;ruchi&quot;, &quot;bhure&quot;);</span>
+
+    @Override
+    public Mono&lt;Person&gt; getById(Integer id) {
+<span class="pc bpc" id="L17" title="3 of 5 branches missed.">        switch (id){</span>
+            case 1:
+<span class="fc" id="L19">                return Mono.just(aparna);</span>
+            case 2:
+<span class="nc" id="L21">                return Mono.just(medha);</span>
+            case 3:
+<span class="nc" id="L23">                return Mono.just(arvind);</span>
+            case 4:
+<span class="fc" id="L25">                return Mono.just(ruchi);</span>
+            default:
+<span class="nc" id="L27">                return Mono.empty();</span>
+        }
+    }
+
+    @Override
+    public Flux&lt;Person&gt; findAll() {
+<span class="nc" id="L33">        return Flux.just(aparna, medha, arvind, ruchi);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
