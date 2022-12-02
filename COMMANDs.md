@@ -27,6 +27,7 @@ mvn org.jacoco:jacoco-maven-plugin:0.8.8:report -Djacoco.dataFile=/Users/ab73269
 
 # Report Generation Using jacococli
 java -jar /Users/ab732698/Downloads/jacoco-0.8.8/lib/jacococli.jar report /Users/ab732698/Downloads/systemtests/jacoco.exec --classfiles /Users/ab732698/Downloads/systemtests/target --html /Users/ab732698/Downloads/systemtests/report
+java -jar /Users/ab732698/Downloads/jacoco-0.8.8/lib/jacococli.jar report /Users/ab732698/Downloads/systemtests/jacoco.exec --classfiles /Users/ab732698/Downloads/systemtests/target --csv /Users/ab732698/Downloads/systemtests/report.csv
 
 # Merge multiple exec
 java -jar docker/jacococli.jar merge "/Users/ab732698/Downloads/jacoco-2022-11-11_04-43-20.exec" "/Users/ab732698/Downloads/jacoco-2022-11-11_04-41-12.exec" --destfile /Users/ab732698/Downloads/jacocomerged.exec
